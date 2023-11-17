@@ -1,9 +1,9 @@
 <?php
 // Database connection details
-$host = 'ls-ccb1e52d3f78f1e75117f2a39182d15aac5f96d0.c4bmbwqvtvvv.ca-central-1.rds.amazonaws.com';
+$host = 'ls-713a86a3ecf2e021aa405281bcb7f14efd61d1a3.c4bmbwqvtvvv.ca-central-1.rds.amazonaws.com';
 $port = 3306;
 $username = 'dbmasteruser';
-$password = 'fgf(>.lC;+#XZBg$I[VGf:J03mK#61N$';
+$password = '$)?_otXgj9m~`6WiM;?gy9nuF,Zg1y:Z';
 $database = 'Registration';
 
 // Database connection
