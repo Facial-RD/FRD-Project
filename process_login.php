@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Verify the password
         if (password_verify($password, $user['password'])) {
             // Redirect to website.html
-            header('Location: website.html');
+            header('Location: Website.html');
             exit(); // Ensure no further code execution after the redirect
         } else {
             echo 'Incorrect password.';
