@@ -1,3 +1,4 @@
+<!-- Code adapted from tutorial: [https://www.youtube.com/watch?v=M6wpt7ifGzw&ab_channel=OnlineITtutsTutorials] -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,35 +12,35 @@
             var form = document.querySelector('form');
 
             form.addEventListener('submit', function (event) {
-                // Validate email
+                
                 var emailInput = form.querySelector('input[name="email"]');
                 if (!validateEmail(emailInput.value)) {
-                    alert('Please enter a valid email address.');
-                    event.preventDefault(); // Prevent form submission
+                    alert('Invalid email formatting. Please try again.');
+                    event.preventDefault(); 
                     return;
                 }
 
-                // Validate password
+                
                 var passwordInput = form.querySelector('input[name="password"]');
                 if (!validatePassword(passwordInput.value)) {
-                    alert('Password must be at least 7 characters.');
-                    event.preventDefault(); // Prevent form submission
+                    alert('Password should be at least 5 characters');
+                    event.preventDefault(); 
                 }
             });
 
             function validateEmail(email) {
-                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                var emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\[a-z]{2,4}$/;
                 return emailPattern.test(email);
             }
 
             function validatePassword(password) {
-                return password.length >= 7;
+                return password.length >= 5;
             }
         });
     </script>
 </head>
 <body>
-    <!-- Logo with link to Website.html -->
+    
     <div class="logo-container">
         <a href="Website.html">
             <img src="logo.png" class="logo">
@@ -71,17 +72,18 @@
                         <label for="confirm-password">Confirm Password</label>
                         <input type="password" name="confirm-password">
                     </div>
-                    <button type="submit" name="submit">Sign Up</button>
+                    <button type="submit" name="submit">Register</button>
                     <p class="bottom-text">
-                        By clicking the Sign Up Button, you agree to our
-                        <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
+                        
+                        
                     </p>
                 </form>
             </div>
             <footer>
-                <p>Already Have an Account? <a href="login.html">Login Here</a></p>
+                <p>Have an account? <a href="login.html">Login Here</a></p>
             </footer>
         </div>
     </div>
 </body>
 </html>
+
