@@ -16,7 +16,7 @@
                 var emailInput = form.querySelector('input[name="email"]');
                 if (!validateEmail(emailInput.value)) {
                     alert('Please enter a valid email address.');
-                    event.preventDefault(); // Prevent form submission
+                    event.preventDefault(); 
                     return;
                 }
 
@@ -24,7 +24,7 @@
                 var passwordInput = form.querySelector('input[name="password"]');
                 if (!validatePassword(passwordInput.value)) {
                     alert('Password must be at least 7 characters.');
-                    event.preventDefault(); // Prevent form submission
+                    event.preventDefault(); 
                 }
             });
 
