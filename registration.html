@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Registration Form</title>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -15,46 +15,42 @@
                 
                 var emailInput = form.querySelector('input[name="email"]');
                 if (!validateEmail(emailInput.value)) {
-                    alert('Invalid email formatting. Please try again.');
-                    event.preventDefault(); 
+                    alert('Please enter a valid email address.');
+                    event.preventDefault(); // Prevent form submission
                     return;
                 }
 
                 
                 var passwordInput = form.querySelector('input[name="password"]');
                 if (!validatePassword(passwordInput.value)) {
-                    alert('Password should be at least 5 characters');
-                    event.preventDefault(); 
+                    alert('Password must be at least 7 characters.');
+                    event.preventDefault(); // Prevent form submission
                 }
             });
 
             function validateEmail(email) {
-                var emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\[a-z]{2,4}$/;
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 return emailPattern.test(email);
             }
 
             function validatePassword(password) {
-                return password.length >= 5;
+                return password.length >= 7;
             }
         });
     </script>
 </head>
 <body>
-    
-    <div class="logo-container">
-        <a href="Website.html">
-            <img src="logo.png" class="logo">
-        </a>
-    </div>
-
     <div class="banner">
+        
         <div id="container">
+            
             <div class="form-wrap">
                 <h1>Sign Up</h1>
+                
                 <form action="process_form.php" method="post">
                     <div class="form-group">
                         <label for="first-name">First Name</label>
-                        <input type="text" name="firstname">
+
                     </div>
                     <div class="form-group">
                         <label for="last-name">Last Name</label>
@@ -72,18 +68,20 @@
                         <label for="confirm-password">Confirm Password</label>
                         <input type="password" name="confirm-password">
                     </div>
-                    <button type="submit" name="submit">Register</button>
+                    <button type="submit" name="submit">Sign Up</button>
                     <p class="bottom-text">
-                        
-                        
+                        By clicking the Sign Up Button, you agree to our
+                        <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
                     </p>
                 </form>
+                
             </div>
+            
             <footer>
-                <p>Have an account? <a href="login.html">Login Here</a></p>
+                <p>Already Have an Account? <a href="#">Login Here</a></p>
             </footer>
         </div>
+        
     </div>
 </body>
 </html>
-
