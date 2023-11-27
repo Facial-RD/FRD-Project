@@ -22,7 +22,7 @@ ob_end_flush();
 </head>
 <body>
     <div class="logo-container">
-        <a href=""> <!-- Website.html -->
+        <a href="Website.html"> <!-- Website.html -->
             <img src="logo.png" class="logo" alt="Logo">
         </a>
     </div>
