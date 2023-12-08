@@ -30,12 +30,12 @@ if(isset($_POST["sendEmail"])){
         $mail->send();
 
         $_SESSION['isSent'] = true;
-        header('location: ./');
+        header('location: support.php');
         exit;
     } catch (Exception $e) {
         $_SESSION['isSent'] = false;
         print $mail->ErrorInfo;
-        header('location: ./');
+        header('location: support.php');
         exit;
     }
 
